@@ -1,0 +1,28 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}    
+.regform{
+    font-size: 18px;
+    border-radius: 10px;
+    width:250px;
+    background-color:rgb(0,0,0,.5);
+    margin:150px auto;
+    color:##313741;
+    padding:10px 20px 30px;
+}
+.regform h2{
+    text-align: center;
+    color: #e29578;
+
+}
+.regform .txtlabel{
+    display:block;
+}
+.input input{
+    margin:5px 0px 15px;
+    width: 100%;
+    font-size:1.5em;
+    border-radius: 10px;
+    padding:10px 10px;
+    box-sizing: border-box;
+}

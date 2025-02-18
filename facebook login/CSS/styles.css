@@ -1,0 +1,24 @@
+#boxx {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(212, 212, 212);  
+    display: flex;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(18, 21, 107);     
+}
+
+#box1 {
+    background: green; 
+}
+
+#box2 {
+    background: rgb(136, 6, 201);  
+}
+
+#box3 {
+    background: red;
+}

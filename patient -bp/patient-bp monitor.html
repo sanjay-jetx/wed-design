@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Monitor Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #0056b3;
+      margin-bottom: 20px;
+    }
+    .card {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 200px;
+    }
+    .card h2 {
+      font-size: 1.2em;
+      margin: 0;
+      color: #555;
+    }
+    .value {
+      font-size: 2em;
+      color: #007bff;
+      margin: 10px 0;
+    }
+    .status {
+      font-weight: bold;
+    }
+    .alert {
+      color: red;
+    }
+    .inputField {
+      margin: 10px 0;
+      padding: 5px;
+      font-size: 1em;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Monitor Dashboard</h1>
+    <div class="card" id="heartRateCard">
+      <h2>Heart Rate (PR)</h2>
+      <input type="number" id="heartRateInput" class="inputField" placeholder="Enter bpm">
+      <div class="value" id="heartRate">-- bpm</div>
+      <div class="status" id="heartRateStatus"></div>
+    </div>
+    <div class="card" id="spo2Card">
+      <h2>SpO2</h2>
+      <input type="number" id="spo2Input" class="inputField" placeholder="Enter %">
+      <div class="value" id="spo2">-- %</div>
+      <div class="status" id="spo2Status"></div>
+    </div>
+    <div class="card" id="respCard">
+      <h2>Respiration Rate</h2>
+      <input type="number" id="respRateInput" class="inputField" placeholder="Enter bpm">
+      <div class="value" id="respRate">-- bpm</div>
+      <div class="status" id="respStatus"></div>
+    </div>
+    <div class="card" id="glucoseCard">
+      <h2>Blood Glucose Level</h2>
+      <input type="number" id="glucoseInput" class="inputField" placeholder="Enter mg/dL">
+      <div class="value" id="glucose">-- mg/dL</div>
+      <div class="status" id="glucoseStatus"></div>
+    </div>
+    <button onclick="updateData()">Update Data</button>
+  </div>
+
+  <script>
+    // Function to update data based on user input
+    function updateData() {
+      // Get user input values
+      const heartRate = document.getElementById('heartRateInput').value;
+      const spo2 = document.getElementById('spo2Input').value;
+      const respRate = document.getElementById('respRateInput').value;
+      const glucose = document.getElementById('glucoseInput').value;
+
+      // If values are not entered, show an alert
+      if (heartRate === "" || spo2 === "" || respRate === "" || glucose === "") {
+        alert("Please enter all values.");
+        return;
+      }
+
+      // Update HTML elements with new data
+      document.getElementById('heartRate').innerText = ${heartRate} bpm;
+      document.getElementById('spo2').innerText = ${spo2} %;
+      document.getElementById('respRate').innerText = ${respRate} bpm;
+      document.getElementById('glucose').innerText = ${glucose} mg/dL;
+
+      // Update statuses based on thresholds
+
+      // Heart Rate (PR)
+      document.getElementById('heartRateStatus').innerText = (heartRate < 60 || heartRate > 100) ? 'Abnormal' : 'Normal';
+      document.getElementById('heartRateStatus').className = (heartRate < 60 || heartRate > 100) ? 'alert' : '';
+
+      // SpO2
+      document.getElementById('spo2Status').innerText = (spo2 < 95) ? 'Low Oxygen Level' : 'Normal';
+      document.getElementById('spo2Status').className = (spo2 < 95) ? 'alert' : '';
+
+      // Respiration Rate
+      document.getElementById('respStatus').innerText = (respRate < 12 || respRate > 20) ? 'Abnormal' : 'Normal';
+      document.getElementById('respStatus').className = (respRate < 12 || respRate > 20) ? 'alert' : '';
+
+      // Blood Glucose Level
+      document.getElementById('glucoseStatus').innerText = (glucose < 70 || glucose > 140) ? 'Abnormal' : 'Normal';
+      document.getElementById('glucoseStatus').className = (glucose < 70 || glucose > 140) ? 'alert' : '';
+    }
+  </script>
+</body>
+</html>

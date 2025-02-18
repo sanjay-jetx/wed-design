@@ -1,0 +1,18 @@
+<style>
+            h1,h2{
+                color:rgb(216, 24, 65);
+                background-color: darkorchid;
+
+            }
+            #q {
+                font-size: 30px;
+                background-color:green;
+                border:10px solid brown;
+            }
+            .as {
+                font-size: 20px;
+                background-color:rgb(60, 27, 160);
+                border:10px solid rgb(154, 168, 58);
+            }
+           
+</style>

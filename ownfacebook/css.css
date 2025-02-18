@@ -1,0 +1,56 @@
+body,h1,p,h2{
+    margin:0;
+    font-family:'roboto',sans-serif;
+}
+.main-div{
+    background-color:#f0f2f5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+#logo{
+    padding:20px 0px;
+    font-size:55px;
+    color:#0b66ff;
+
+}
+.sign-up{
+    background-color:aliceblue;
+    width: 430px;
+    border-radius: 5px;
+
+}
+.heading{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc ;
+}
+h2{
+padding-bottom: 8px;
+}
+.input-fields{
+    padding: 15px;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size:15px;
+}
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   width: 100%;
+   margin-bottom: 8px;
+}
+.half{
+    display: flex;
+    width: 48%;
+}
+.full{
+    display: flex;
+    width: 100%;
+}
+
