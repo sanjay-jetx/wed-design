@@ -1,0 +1,3 @@
+def painter(ol):
+    print("painter",ol)
+painter(10+20)
