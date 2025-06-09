@@ -1,0 +1,14 @@
+number=[1,2,45,4234,5243]
+name=['sas','dfs']
+print(number[1])
+print(name)
+number.sort()
+print(number)
+number.insert(5,7586)
+print(number)
+number.extend([345,435,4355,768,345,2,454])
+print(number)
+number[1:3]=[234,23]
+print(number)
+number.remove(23)
+print(number)
