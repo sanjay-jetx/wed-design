@@ -130,8 +130,8 @@ def main():
            load_the_file(filename)
         
         elif(choice == 7):
-            print("dsdf")
+            print("exit")
             break
         else:
-            print("dsdf")
+            print("enter the valid option")
 main() 
